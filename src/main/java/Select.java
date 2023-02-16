@@ -5,7 +5,7 @@ import java.util.Arrays;
  * @Description:
  * @Date: Created in 10:00 2023/2/15
  */
-public class Sel {
+public class Select {
 
     public static void s(Comparable[] arr){
         for (int i = 0; i <= arr.length - 2; i++) {
@@ -32,7 +32,7 @@ public class Sel {
 
     public static void main(String[] args) {
         Integer[] arr ={2,3,3,445,52423,1,867};
-        Sel.s(arr);
+        Select.s(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
