@@ -1,22 +1,27 @@
+package sort;
+
 import java.util.Arrays;
 
 /**
  * @Author: Eiaokiang
  * @Description:
- * @Date: Created in 9:37 2023/2/15
+ * @Date: Created in 9:50 2023/2/16
  */
-public class Bubb {
-
+public class Insert {
 
     public static void s(Comparable []arr){
-        for (int i = arr.length -1; i > 0 ; i--) {
-            for (int j = 0; j < i; j++) {
-                if (greater(arr[j],arr[j+1])){
-                    ex(arr,j,j+1);
+        for (int i = 1; i <= arr.length-1 ; i++) {
+            for (int j = i; j > 0; j--) {
+                if (greater(arr[j],arr[j-1])){
+                    ex(arr,j,j-1);
+                }else {
+                    break;
                 }
             }
         }
     }
+
+
 
     private static boolean greater(Comparable a , Comparable b){
         return a.compareTo(b)>0;
@@ -31,7 +36,7 @@ public class Bubb {
 
     public static void main(String[] args) {
         Integer[] arr ={2,3,3,445,52423,1,867};
-        Bubb.s(arr);
+        Insert.s(arr);
         System.out.println(Arrays.toString(arr));
     }
 

@@ -1,25 +1,25 @@
+package sort;
+
 import java.util.Arrays;
 
 /**
  * @Author: Eiaokiang
  * @Description:
- * @Date: Created in 9:50 2023/2/16
+ * @Date: Created in 10:00 2023/2/15
  */
-public class Insert {
+public class Select {
 
-    public static void s(Comparable []arr){
-        for (int i = 1; i <= arr.length-1 ; i++) {
-            for (int j = i; j > 0; j--) {
-                if (greater(arr[j],arr[j-1])){
-                    ex(arr,j,j-1);
-                }else {
-                    break;
+    public static void s(Comparable[] arr){
+        for (int i = 0; i <= arr.length - 2; i++) {
+            int min = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (greater(arr[min],arr[j])){
+                    min = j;
                 }
             }
+            ex(arr,i,min);
         }
     }
-
-
 
     private static boolean greater(Comparable a , Comparable b){
         return a.compareTo(b)>0;
@@ -34,8 +34,7 @@ public class Insert {
 
     public static void main(String[] args) {
         Integer[] arr ={2,3,3,445,52423,1,867};
-        Insert.s(arr);
+        Select.s(arr);
         System.out.println(Arrays.toString(arr));
     }
-
 }

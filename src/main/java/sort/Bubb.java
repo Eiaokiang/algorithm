@@ -1,21 +1,22 @@
+package sort;
+
 import java.util.Arrays;
 
 /**
  * @Author: Eiaokiang
  * @Description:
- * @Date: Created in 10:00 2023/2/15
+ * @Date: Created in 9:37 2023/2/15
  */
-public class Select {
+public class Bubb {
 
-    public static void s(Comparable[] arr){
-        for (int i = 0; i <= arr.length - 2; i++) {
-            int min = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (greater(arr[min],arr[j])){
-                    min = j;
+
+    public static void s(Comparable []arr){
+        for (int i = arr.length -1; i > 0 ; i--) {
+            for (int j = 0; j < i; j++) {
+                if (greater(arr[j],arr[j+1])){
+                    ex(arr,j,j+1);
                 }
             }
-            ex(arr,i,min);
         }
     }
 
@@ -32,7 +33,8 @@ public class Select {
 
     public static void main(String[] args) {
         Integer[] arr ={2,3,3,445,52423,1,867};
-        Select.s(arr);
+        Bubb.s(arr);
         System.out.println(Arrays.toString(arr));
     }
+
 }
