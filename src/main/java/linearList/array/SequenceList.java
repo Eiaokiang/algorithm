@@ -1,4 +1,4 @@
-package linearList;
+package linearList.array;
 
 import java.util.Arrays;
 
