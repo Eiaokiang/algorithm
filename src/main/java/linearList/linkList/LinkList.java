@@ -9,7 +9,7 @@ import java.util.Iterator;
  */
 
 /**
- * 单项列表
+ * 单向列表
  *
  * @param <T>
  */
